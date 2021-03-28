@@ -1,0 +1,24 @@
+<form [formGroup]="credit">
+
+  <app-input [control]="credit.get('name')"> </app-input> <br>
+  <app-input [control]="credit.get('cardNumber')"> </app-input> <br>
+  <app-input [control]="credit.get('expireDate')"> </app-input> <br>
+  <app-input [control]="credit.get('code')"> </app-input>
+
+
+
+</form>
+
+
+<div>
+  Forms Values : {{credit.value | json}}
+
+</div>
+
+<div>
+  Form Valid : {{credit.valid }}
+</div>
+
+<div>
+  Errors : {{credit.controls.name.errors | json}}
+</div>
